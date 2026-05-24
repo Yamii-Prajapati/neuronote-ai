@@ -1,0 +1,81 @@
+@import "tailwindcss";
+body {
+  background: #060816;
+  overflow-x: hidden;
+}
+
+/* Animated Gradient */
+
+@keyframes floatGlow {
+  0% {
+    transform: translate(0px, 0px);
+  }
+
+  50% {
+    transform: translate(30px, -30px);
+  }
+
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+.glow1 {
+  animation: floatGlow 8s ease-in-out infinite;
+}
+
+.glow2 {
+  animation: floatGlow 10s ease-in-out infinite;
+
+* {
+  font-family: 'Space Grotesk', sans-serif;
+}}
+/* Floating Particles */
+
+.particles {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.particle {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: rgba(255,255,255,0.15);
+  border-radius: 9999px;
+  animation: floatParticle linear infinite;
+}
+
+@keyframes floatParticle {
+
+  0% {
+    transform: translateY(100vh) scale(0);
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-10vh) scale(1);
+    opacity: 0;
+  }
+}
+@keyframes float {
+
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
